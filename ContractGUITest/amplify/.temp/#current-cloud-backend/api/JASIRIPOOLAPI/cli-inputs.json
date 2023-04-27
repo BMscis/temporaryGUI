@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/pool": {
+      "name": "/pool",
+      "lambdaFunction": "ADDLIQUIDITY",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

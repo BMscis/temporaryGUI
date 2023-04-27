@@ -1,0 +1,70 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-jasiripool-dev-30612-authRole",
+      "UnauthRoleArn": "arn:aws:iam::040732739798:role/amplify-jasiripool-dev-30612-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::040732739798:role/amplify-jasiripool-dev-30612-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-jasiripool-dev-30612-deployment",
+      "UnauthRoleName": "amplify-jasiripool-dev-30612-unauthRole",
+      "StackName": "amplify-jasiripool-dev-30612",
+      "StackId": "arn:aws:cloudformation:us-east-2:040732739798:stack/amplify-jasiripool-dev-30612/f873d780-75c2-11ed-9607-0ac2a7a36ca4",
+      "AmplifyAppId": "d1usxge7sh25jt"
+    }
+  },
+  "function": {
+    "ADDLIQUIDITY": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [],
+      "lastBuildTimeStamp": "2022-12-07T00:18:06.791Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2022-12-07T00:18:16.611Z",
+      "distZipFilename": "ADDLIQUIDITY-766e72546a726258494e-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-jasiripool-dev-30612-deployment",
+        "s3Key": "amplify-builds/ADDLIQUIDITY-766e72546a726258494e-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-jasiripool-dev-30612-deployment/amplify-cfn-templates/function/ADDLIQUIDITY-cloudformation-template.json",
+        "logicalId": "functionADDLIQUIDITY"
+      },
+      "lastPushTimeStamp": "2022-12-07T00:20:17.440Z",
+      "output": {
+        "Region": "us-east-2",
+        "Arn": "arn:aws:lambda:us-east-2:040732739798:function:ADDLIQUIDITY-dev",
+        "Name": "ADDLIQUIDITY-dev",
+        "LambdaExecutionRole": "jasiripoolLambdaRoled48d314e-dev"
+      },
+      "lastPushDirHash": "puN/2LIMkAWJYcqSdk1MpF6E4oA="
+    }
+  },
+  "api": {
+    "JASIRIPOOLAPI": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "ADDLIQUIDITY",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-jasiripool-dev-30612-deployment/amplify-cfn-templates/api/JASIRIPOOLAPI-cloudformation-template.json",
+        "logicalId": "apiJASIRIPOOLAPI"
+      },
+      "lastPushTimeStamp": "2022-12-07T00:20:17.440Z",
+      "output": {
+        "ApiName": "JASIRIPOOLAPI",
+        "RootUrl": "https://y907h2x4s9.execute-api.us-east-2.amazonaws.com/dev",
+        "ApiId": "y907h2x4s9"
+      },
+      "lastPushDirHash": "lkdinvjo6agKzAki1NziSjq0eUc="
+    }
+  }
+}
